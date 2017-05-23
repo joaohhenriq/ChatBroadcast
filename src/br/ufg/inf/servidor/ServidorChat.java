@@ -24,12 +24,11 @@ public class ServidorChat {
 	}
 	
 	public static void distribuirMensagem(String mensagem, Socket cli) throws IOException{
-		
+		System.out.println(mensagem);
 		for (Socket c : clientes) {
-			PrintWriter pw = new PrintWriter(c.getOutputStream(),true);
-			if (!(clientes.equals(cli))){
+			if (!(c.equals(cli))){
+				PrintWriter pw = new PrintWriter(c.getOutputStream(),true);
 				pw.println(mensagem);
-				System.out.println(mensagem);
 			}
 			
 		}
