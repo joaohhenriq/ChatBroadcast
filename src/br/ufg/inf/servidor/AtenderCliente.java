@@ -23,7 +23,9 @@ public class AtenderCliente implements Runnable{
 			}while(true);
 			
 		} catch (IOException e) {
-			e.printStackTrace();
+			ServidorChat.remover(cli);
+		} catch (java.util.NoSuchElementException e) {
+			ServidorChat.remover(cli);
 		}
 		
 	}

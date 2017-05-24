@@ -13,5 +13,4 @@ public class ClienteChat {
 		new Thread(new EnviarMensagem(servidor)).start();
 		new Thread(new ReceberMensagem(servidor)).start();
 	}
-
 }

@@ -30,8 +30,11 @@ public class ServidorChat {
 				PrintWriter pw = new PrintWriter(c.getOutputStream(),true);
 				pw.println(mensagem);
 			}
-			
 		}
+	}
+	
+	public static void remover(Socket cli){
+		clientes.remove(cli);
 	}
 
 }
